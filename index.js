@@ -14,15 +14,12 @@ import './style.css';
 
 const PIXEL_COLOR = '#e44d4d';
 
-const fakeCanvas = document.querySelector('.fake-canvas');
-console.log(fakeCanvas);
-
-const originalCanvas = document.querySelectorAll('.original-canvas .flex-row');
-console.log(originalCanvas);
+const fakeCanvas = document.querySelectorAll('.fake-canvas .pixel');
+const originalCanvas = document.querySelectorAll('.original-canvas .pixel');
 
 originalCanvas.forEach((el, i) => {
-  console.log(el, i);
-  // el.forEach((element, i) => {
-  //   console.log(element);
-  // });
+  console.log(originalCanvas[i].classList.value);
+  if (el.classList.value.includes('pixel-dot')) {
+    fakeCanvas[i].classList.add('pixel-dot');
+  }
 });
