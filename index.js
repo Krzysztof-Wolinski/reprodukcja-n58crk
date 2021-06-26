@@ -12,13 +12,10 @@ import './style.css';
 // * nie modyfikuj styli CSS
 // * nie kopiuj oryginału i nie wklejaj go w miejscep płótna ;)
 
-const PIXEL_COLOR = '#e44d4d';
-
 const fakeCanvas = document.querySelectorAll('.fake-canvas .pixel');
 const originalCanvas = document.querySelectorAll('.original-canvas .pixel');
 
 originalCanvas.forEach((el, i) => {
-  console.log(originalCanvas[i].classList.value);
   if (el.classList.value.includes('pixel-dot')) {
     fakeCanvas[i].classList.add('pixel-dot');
   }
